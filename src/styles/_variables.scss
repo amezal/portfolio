@@ -1,0 +1,12 @@
+$white: #FFFFFF;
+$darkblue: #16222E;
+$midblue: #213040;
+$lightblue: #bfd9f8;
+$yellow: #f8fa72;
+
+@mixin flex ($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

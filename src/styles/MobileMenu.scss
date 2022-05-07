@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+.mobile-menu {
+  position: fixed;
+  @include flex(column, flex-start, center);
+
+  background: rgba(33, 48, 64, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  top: 6rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 15%;
+
+  .links {
+    @include flex(column, center, center);
+    gap: 5rem;
+  }
+
+
+  @media only screen and (min-width: 800px) {
+    display: none;
+  }
+}

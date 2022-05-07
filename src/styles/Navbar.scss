@@ -1,0 +1,32 @@
+@use 'variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap');
+
+
+
+.navbar {
+  @include flex(row, space-between, center);
+  padding: 0 2rem;
+  background-color: $darkblue;
+  position: fixed;
+  width: 100%;
+
+  .logo {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+  }
+
+  .Burger {
+    @include flex(column, center, center);
+  }
+
+  @media only screen and (min-width: 800px) {
+    padding: 1rem 2rem;
+
+    // .Burger {
+    //   display: none;
+    // }
+  }
+
+}
