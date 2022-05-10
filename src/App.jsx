@@ -8,6 +8,7 @@ import ErrorPage from './pages/ErrorPage';
 import Layout from './components/Layout';
 import './styles/Globals.scss';
 import 'sanitize.css';
+import { LanguageProvider } from './language/Language';
 
 function App() {
 
@@ -38,14 +39,16 @@ function App() {
     //     <h1>PROJECTS</h1>
     //   </section>
     // </div>
-    <Layout>
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/resume/" element={<Resume />} />
-        <Route path="/contact/" element={<Contact />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </Layout>
+    <LanguageProvider>
+      <Layout>
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/resume/" element={<Resume />} />
+          <Route path="/contact/" element={<Contact />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </Layout>
+    </LanguageProvider>
   )
 }
 
