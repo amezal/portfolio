@@ -3,6 +3,7 @@
 .mobile-menu {
   position: fixed;
   @include flex(column, space-around, center);
+  z-index: 100;
 
   background: rgba(33, 48, 64, 0.75);
   backdrop-filter: blur(4px);

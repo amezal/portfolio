@@ -16,6 +16,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $darkblue;
   color: $lightblue;
+  overflow: hidden;
+  height: 100%;
 }
 
 h1,

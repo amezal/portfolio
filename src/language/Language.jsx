@@ -15,6 +15,7 @@ const dictionaryList = {
       resume: 'Currículum',
       contact: 'Contacto',
     },
+    home: 'Hola'
   },
 }
 
