@@ -7,7 +7,7 @@ import '../styles/MobileMenu.scss';
 
 const MobileMenu = ({ active }) => {
 
-  const { changeLanguage, dictionary: { nav } } = useLanguage();
+  const { changeLanguage, dictionary: { nav }, userLanguage } = useLanguage();
 
   const props = useSpring({
     right: active ? 0 : -window.innerWidth,
@@ -20,14 +20,26 @@ const MobileMenu = ({ active }) => {
         <Link to="/resume">{nav.resume}</Link>
         <Link to="/contact">{nav.contact}</Link>
       </div>
-      <div className="language">
-        <button onClick={() => changeLanguage('en')}>EN</button>
-        |
-        <button onClick={() => changeLanguage('es')}>ES</button>
-      </div>
-      <div className="socials">
-        <a href="https://github.com/amezal"><Github size={42} /></a>
-        <a href=""><Linkedin size={42} /></a>
+      <div className="language-socials">
+        <div className="language">
+          <button
+            onClick={() => changeLanguage('en')}
+            className={userLanguage === 'en' ? 'active' : ''}
+          >
+            EN
+          </button>
+          |
+          <button
+            onClick={() => changeLanguage('es')}
+            className={userLanguage === 'es' ? 'active' : ''}
+          >
+            ES
+          </button>
+        </div>
+        <div className="socials">
+          <a href="https://github.com/amezal"><Github size={42} /></a>
+          <a href=""><Linkedin size={42} /></a>
+        </div>
       </div>
     </animated.nav>
   )
