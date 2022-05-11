@@ -16,7 +16,8 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.3.0",
     "react-spring": "^9.4.5",
-    "sanitize.css": "^13.0.0"
+    "sanitize.css": "^13.0.0",
+    "vite-plugin-svgr": "^2.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

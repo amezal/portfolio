@@ -3,7 +3,7 @@ import React, { useState, createContext, useContext } from 'react';
 const dictionaryList = {
   en: {
     nav: {
-      work: 'Work',
+      work: 'Projects',
       resume: 'Resume',
       contact: 'Contact',
     },
