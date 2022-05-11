@@ -28,6 +28,7 @@ h3 {
 
 p {
   margin-top: 0;
+  font-size: 2rem;
 }
 
 a,
@@ -35,6 +36,7 @@ a:visited,
 a:active {
   text-decoration: none;
   color: inherit;
+  font-size: 2rem;
 }
 
 button {
@@ -42,4 +44,25 @@ button {
   border: none;
   background-color: unset;
   color: inherit;
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $darkblue;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $lightblue;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $yellow;
 }
