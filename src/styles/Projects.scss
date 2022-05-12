@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+.projects {
+  background: rgb(22, 34, 46);
+  background: linear-gradient(0deg, rgba(22, 34, 46, 0.275) 0%, rgba(28, 37, 45, 0.8) 60%);
+  position: relative;
+  top: -20px;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+  box-shadow: 0px -2px 25px 20px rgba(28, 37, 45, 0.8);
+  @include flex(column, center, center);
+
+  @media only screen and (min-width: 800px) {
+    background: rgb(22, 34, 46);
+    background: linear-gradient(0deg, rgba(22, 34, 46, 0.275) 0%, rgba(36, 41, 45, 1) 80%);
+    // top: -30px;
+    padding-top: 20vh;
+    box-shadow: 0px -2px 25px 20px rgba(36, 41, 45, 1);
+  }
+}

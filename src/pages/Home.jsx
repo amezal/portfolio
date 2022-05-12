@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../language/Language';
 import Hero from '../components/Hero';
+import Projects from '../components/Projects';
 import '../styles/Home.scss';
 
 const Home = () => {
@@ -10,38 +11,7 @@ const Home = () => {
   return (
     <main className="home">
       <Hero />
-      <section>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-        <h1>PROJECTS</h1>
-      </section>
+      <Projects />
     </main>
   )
 }
