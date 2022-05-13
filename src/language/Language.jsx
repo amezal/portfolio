@@ -1,22 +1,10 @@
 import React, { useState, createContext, useContext } from 'react';
+import es from './es';
+import en from './en';
 
 const dictionaryList = {
-  en: {
-    nav: {
-      work: 'Projects',
-      resume: 'Resume',
-      contact: 'Contact',
-    },
-    home: 'Hello'
-  },
-  es: {
-    nav: {
-      work: 'Proyectos',
-      resume: 'Currículum',
-      contact: 'Contacto',
-    },
-    home: 'Hola'
-  },
+  es,
+  en
 }
 
 const LanguageContext = createContext({
