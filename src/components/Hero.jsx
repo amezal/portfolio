@@ -34,6 +34,11 @@ const Hero = () => {
       <div className="hero">
         <div className="hero__content">
           <h1>Armando Meza</h1>
+          <p>
+            I'm a web developer based in Nicaragua.
+            <br />
+            I like building fast, interactive and functional web pages and apps.
+          </p>
         </div>
         <Spline scene="https://prod.spline.design/ImjjIjECdxnn2LDN/scene.splinecode"
           className='canvas'

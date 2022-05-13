@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+.project {
+  color: white;
+  background-color: $midblue;
+  @include flex(column, center, stretch);
+  padding: 5rem 3rem;
+  border-radius: 10px;
+  max-width: 95%;
+  font-size: 1.2rem;
+  box-shadow: 13px 13px 26px #131d27,
+    -13px -13px 26px #192735;
+
+  h3 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+
+  p {
+    color: $lightblue;
+    font-size: 1.5rem;
+  }
+
+  video {
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .buttons {
+    @include flex(row, space-around, center);
+
+    button {
+      @include flex(row, space-between, center);
+      background-color: $darkblue;
+      border: none;
+      outline: none;
+      padding: 1em 1.5em;
+      cursor: pointer;
+      transition: background-color, color, 150ms ease-in-out;
+
+      svg {
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        color: $darkblue;
+        background-color: $yellow;
+        transition: background-color, color, 300ms ease-in-out;
+      }
+    }
+  }
+
+}
