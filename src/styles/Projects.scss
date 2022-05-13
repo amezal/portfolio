@@ -13,11 +13,12 @@
   &__list {
     @include flex(column, center, center);
     margin-top: 5vh;
+    gap: 10vh;
   }
 
   @media only screen and (min-width: 800px) {
     background: rgb(22, 34, 46);
-    background: linear-gradient(0deg, rgba(22, 34, 46, 0.275) 60%, rgba(36, 41, 45, 1) 80%);
+    background: linear-gradient(0deg, rgba(22, 34, 46, 0.275) 85%, rgba(36, 41, 45, 1) 100%);
     // top: -30px;
     padding-top: 40vh;
     box-shadow: 0px -2px 25px 20px rgba(36, 41, 45, 1);

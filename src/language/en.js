@@ -1,4 +1,4 @@
-export default en = {
+const en = {
   nav: {
     work: 'Projects',
     resume: 'Resume',
@@ -15,7 +15,7 @@ export default en = {
     list: {
       greatreads: {
         name: 'Great Reads',
-        description: 'A fullstack web app for tracking your and your friends\' reading lists. Made with React and Mantine UI, MongoDB, and Auth0',
+        description: 'A fullstack web app for tracking your and your friends\' reading lists. Made with React, Mantine UI, MongoDB, and Auth0',
       },
       sorting: {
         name: 'Sorting algorithms simulation',
@@ -36,3 +36,5 @@ export default en = {
     }
   }
 }
+
+export default en;
