@@ -13,6 +13,13 @@ const Navbar = () => {
   const [active, setActive] = useState(false);
   const { changeLanguage, dictionary: { nav }, userLanguage } = useLanguage();
 
+  const goToProjects = () => {
+    const projects = document.getElementById('projects');
+    if (projects) {
+      projects.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <>
       <header className='navbar'>
@@ -23,7 +30,7 @@ const Navbar = () => {
         </div>
 
         <div className="links">
-          <Link to="/#projects">{nav.work}</Link>
+          <Link to="/#projects" onClick={goToProjects}>{nav.work}</Link>
           <Link to="/resume">{nav.resume}</Link>
           <Link to="/contact">{nav.contact}</Link>
         </div>

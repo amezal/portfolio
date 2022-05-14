@@ -2,11 +2,6 @@ import React from 'react';
 import '../styles/Projects.scss';
 import { useLanguage } from '../language/Language';
 import Project from './Project';
-import Emprende from '../assets/Emprende.mp4';
-// import Emprende from '../assets/Emprende.mp4';
-// import Emprende from '../assets/Emprende.mp4';
-// import Emprende from '../assets/Emprende.mp4';
-// import Emprende from '../assets/Emprende.mp4';
 import { FaReact, FaSass, FaWordpress, FaGoogle, FaNode } from 'react-icons/fa';
 import { SiAuth0, SiMongodb, SiVite, SiGatsby } from 'react-icons/si';
 import { DiCss3, DiJavascript, DiHtml5 } from 'react-icons/di';
@@ -17,57 +12,56 @@ const Projects = () => {
   const { dictionary } = useLanguage();
   const texts = dictionary.projects.list;
 
-  const ReactIcon = <FaReact alt='react' />
-  const Sass = <FaSass alt='sas' />
-  const WP = <FaWordpress alt='wordpress' />
-  const Google = <FaGoogle alt='google' />
-  const Node = <FaNode alt='node' />
-  const Gatsby = <SiGatsby alt='gatsby' />
-  const Auth0 = <SiAuth0 alt='auth0' />
-  const Mongo = <SiMongodb alt='mongodb' />
-  const Vite = <SiVite alt='vite' />
-  const CSS = <DiCss3 alt='css' />
-  const JS = <DiJavascript alt='javascript' />
-  const HTML = <DiHtml5 alt='html' />
-  const P5 = <P5Icon alt='p5.js' />
-
+  const ReactIcon = <FaReact key='react' />
+  const Sass = <FaSass key='sas' />
+  const WP = <FaWordpress key='wordpress' />
+  const Google = <FaGoogle key='google' />
+  const Node = <FaNode key='node' />
+  const Gatsby = <SiGatsby key='gatsby' />
+  const Auth0 = <SiAuth0 key='auth0' />
+  const Mongo = <SiMongodb key='mongodb' />
+  const Vite = <SiVite key='vite' />
+  const CSS = <DiCss3 key='css' />
+  const JS = <DiJavascript key='javascript' />
+  const HTML = <DiHtml5 key='html' />
+  const P5 = <P5Icon key='p5.js' />
 
   const projects = {
     greatreads: {
       ...texts.greatreads,
       github: 'https://github.com/Amezal/great-reads-frontend',
       live: 'https://emprende.netlify.app',
-      video: Emprende,
+      video: 'https://drive.google.com/uc?export=view&id=15IeDecdB2T6DAaB1aNbJKU_-hjDwAOUR',
       icons: [ReactIcon, Auth0, Mongo, HTML, CSS, JS, Node]
     },
     emprende: {
       ...texts.emprende,
       github: 'https://github.com/Amezal/emprende-website',
       live: 'https://emprende.netlify.app',
-      video: Emprende,
+      video: 'https://drive.google.com/uc?export=view&id=1_jd8YeuZW3UgWYH1x_aOBVRFEUw55wgA',
       icons: [ReactIcon, Gatsby, WP, Google, HTML, Sass, JS]
     },
     daniela: {
       ...texts.daniela,
       github: 'https://github.com/Amezal/daniela-portfolio',
       live: 'https://danielas-portfolio.netlify.app',
-      video: Emprende,
+      video: 'https://drive.google.com/uc?export=view&id=138nwWMzW2RIn07E16MVsV1I_0AfKUFCT',
       icons: [ReactIcon, Gatsby, WP, HTML, CSS, JS]
     },
     sorting: {
       ...texts.sorting,
       github: 'https://github.com/Amezal/amezal.github.io/tree/master/sorting-algorithms',
       live: 'https://amezal.github.io/sorting-algorithms/',
-      video: Emprende,
+      video: 'https://drive.google.com/uc?export=view&id=1otsTm4iy5kCmtVR6XO4intju9JfBAmA7',
       icons: [HTML, CSS, JS, P5]
     },
-    portfolio: {
-      ...texts.portfolio,
-      github: 'https://github.com/Amezal/portfolio',
-      live: 'https://emprende.netlify.app',
-      video: Emprende,
-      icons: [ReactIcon, Vite, HTML, Sass, JS]
-    },
+    // portfolio: {
+    //   ...texts.portfolio,
+    //   github: 'https://github.com/Amezal/portfolio',
+    //   live: 'https://emprende.netlify.app',
+    //   video: 'https://drive.google.com/uc?export=view&id=138nwWMzW2RIn07E16MVsV1I_0AfKUFCT',
+    //   icons: [ReactIcon, Vite, HTML, Sass, JS]
+    // },
   }
 
   return (
@@ -75,7 +69,7 @@ const Projects = () => {
       <h2>{dictionary.projects.title}</h2>
       <div className="projects__list">
         {Object.keys(projects).map((project, i) => (
-          <Project {...projects[project]} key={i + 1} />
+          <Project {...projects[project]} key={i + 1} i={i + 1} />
         ))}
       </div>
 

@@ -36,9 +36,81 @@
     font-size: 1.5rem;
   }
 
-  video {
-    max-width: 100%;
+
+  &:hover,
+  &:focus {
+
+    .video {
+      .filter {
+        transition: all 300ms ease-in-out;
+        opacity: 0;
+
+        &:before {
+          transition-delay: 150ms;
+          transition: all 300ms ease-in-out;
+          opacity: 0;
+        }
+
+        svg {
+          transition-delay: 150ms;
+          transition: all 300ms ease-in-out;
+          opacity: 0;
+        }
+      }
+
+      video {
+        transition: all 300ms ease-in-out;
+        filter: none;
+        mix-blend-mode: normal;
+      }
+    }
+  }
+
+  .video {
+    position: relative;
+    @include flex(column, center, flex-start);
     margin-bottom: 3rem;
+
+    .filter {
+      transition: all 300ms ease-in-out;
+      background-color: $yellow;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      &:before {
+        transition-delay: 150ms;
+        transition: all 300ms ease-in-out;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0px;
+        mix-blend-mode: screen;
+      }
+
+      svg {
+        transition: all 300ms ease-in-out;
+        position: absolute;
+        opacity: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto auto;
+        z-index: 1;
+        color: $white;
+      }
+    }
+
+
+    video {
+      transition: all 1000ms ease-in-out;
+      mix-blend-mode: multiply;
+      filter: grayscale(100%) contrast(1) brightness(90%);
+      max-width: 100%;
+    }
+
   }
 
   .buttons {
@@ -64,5 +136,9 @@
         transition: background-color, color, 300ms ease-in-out;
       }
     }
+  }
+
+  @media only screen and (min-width: 800px) {
+    max-width: 33vw;
   }
 }

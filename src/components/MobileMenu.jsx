@@ -9,6 +9,13 @@ const MobileMenu = ({ active }) => {
 
   const { changeLanguage, dictionary: { nav }, userLanguage } = useLanguage();
 
+  const goToProjects = () => {
+    const projects = document.getElementById('projects');
+    if (projects) {
+      projects.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   const props = useSpring({
     right: active ? 0 : -window.innerWidth,
     opacity: active ? 1 : 0,
@@ -16,7 +23,7 @@ const MobileMenu = ({ active }) => {
   return (
     <animated.nav className='mobile-menu' style={props}>
       <div className="links">
-        <Link to="/">{nav.work}</Link>
+        <Link to="/#projects" onClick={goToProjects}>{nav.work}</Link>
         <Link to="/resume">{nav.resume}</Link>
         <Link to="/contact">{nav.contact}</Link>
       </div>

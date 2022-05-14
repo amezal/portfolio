@@ -12,11 +12,11 @@ const LoadingScreen = ({ isVisible }) => {
     leave: { opacity: 0 },
     reverse: isVisible,
     config: config.molasses,
-    delay: 500
+    delay: 500,
   })
   return transitions(
     (styles, item) => item && <animated.div className="loading-screen" style={styles}>
-      <Loading width='800px' height='800px' />
+      <Loading width='900px' height='900px' />
       <Logo />
     </animated.div>
   )

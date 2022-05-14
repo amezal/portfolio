@@ -5,7 +5,7 @@ const es = {
     contact: 'Contacto',
   },
   home: `Soy un desarrollador web de Nicaragua.
-  Me gusta programar aplicaciones y sitios web rápidos, interactivos y funcionales.`,
+  Me gusta desarrollar aplicaciones y sitios web rápidos, interactivos y funcionales.`,
   projects: {
     title: 'Proyectos',
     buttons: {
@@ -15,14 +15,14 @@ const es = {
     list: {
       greatreads: {
         name: 'Great Reads',
-        description: 'Aplicación web full stack para mantener listas de libros y chequear las de tus amigos. Hecha con React y Mantine UI, MongoDB y Auth0.'
+        description: 'Aplicación web full stack para mantener listas de libros y chequear las de tus amigos. Hecha con React y Mantine UI para interfaces, MongoDB como base de datos y Auth0 para autenticación de usuarios.'
       },
       sorting: {
         name: 'Simulación de algoritmos',
         description: 'Un par de simulaciones de algoritmos de ordenamiento hechas con la librería p5.js para gráficos.',
       },
       emprende: {
-        name: 'Proyecto Emprende (En progreso)',
+        name: 'Proyecto Emprende',
         description: 'Página web para Proyecto Emprende, en el cual emprendedores locales pueden impulsar sus negocios. Cuenta con integración con Wordpress para manejo de contenido, y Google APIs para emails de contacto.',
       },
       daniela: {

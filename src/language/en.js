@@ -15,7 +15,7 @@ const en = {
     list: {
       greatreads: {
         name: 'Great Reads',
-        description: 'A fullstack web app for tracking your and your friends\' reading lists. Made with React, Mantine UI, MongoDB, and Auth0',
+        description: 'A fullstack web app for tracking your and your friends\' reading lists. Made with React, Mantine UI, MongoDB as database, and Auth0 for user authentication',
       },
       sorting: {
         name: 'Sorting algorithms simulation',
