@@ -55,13 +55,13 @@ const Projects = () => {
       video: 'https://drive.google.com/uc?export=view&id=1otsTm4iy5kCmtVR6XO4intju9JfBAmA7',
       icons: [HTML, CSS, JS, P5]
     },
-    // portfolio: {
-    //   ...texts.portfolio,
-    //   github: 'https://github.com/Amezal/portfolio',
-    //   live: 'https://emprende.netlify.app',
-    //   video: 'https://drive.google.com/uc?export=view&id=138nwWMzW2RIn07E16MVsV1I_0AfKUFCT',
-    //   icons: [ReactIcon, Vite, HTML, Sass, JS]
-    // },
+    portfolio: {
+      ...texts.portfolio,
+      github: 'https://github.com/Amezal/portfolio',
+      live: 'https://emprende.netlify.app',
+      video: 'https://drive.google.com/uc?export=view&id=1u05ZP-xFB8JIgFfNbnAfFUdvQHrj9OdW',
+      icons: [ReactIcon, Vite, HTML, Sass, JS]
+    },
   }
 
   return (
