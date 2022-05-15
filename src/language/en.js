@@ -15,15 +15,16 @@ const en = {
     list: {
       greatreads: {
         name: 'Great Reads',
-        description: 'A fullstack web app for tracking your and your friends\' reading lists. Made with React, Mantine UI, MongoDB as database, and Auth0 for user authentication',
+        description:
+          `A fullstack web app for tracking your and your friends' reading lists. Built with React, Mantine UI, MongoDB as database, and Auth0 for user authentication. Use these credentials to try it out! mail: bcbfldnyfuvrsyapnx@nthrl.com\npassword: Testus3r`
       },
       sorting: {
         name: 'Sorting algorithms simulation',
-        description: 'A few sorting algorithms simulations made with p5.js library.',
+        description: 'A few sorting algorithms simulations made with p5.js library.\n',
       },
       emprende: {
         name: 'Emprende Project (WIP)',
-        description: 'Webpage for Emprende Project, in which local entrepeneurs can boost their businesses. It has integration with Wordpress for content management, and Google APIs for contact emails',
+        description: 'Webpage for Emprende Project, in which local entrepeneurs can boost their businesses. \nIt has a seamless integration with Wordpress for content management, and Google APIs for emails and managing contact information\n\n',
       },
       daniela: {
         name: 'Daniela\'s portfolio',

@@ -30,7 +30,7 @@ const Projects = () => {
     greatreads: {
       ...texts.greatreads,
       github: 'https://github.com/Amezal/great-reads-frontend',
-      live: 'https://emprende.netlify.app',
+      live: 'https://greatreads.site',
       video: 'https://drive.google.com/uc?export=view&id=15IeDecdB2T6DAaB1aNbJKU_-hjDwAOUR',
       icons: [ReactIcon, Auth0, Mongo, HTML, CSS, JS, Node]
     },

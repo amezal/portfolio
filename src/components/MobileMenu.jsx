@@ -24,7 +24,7 @@ const MobileMenu = ({ active }) => {
     <animated.nav className='mobile-menu' style={props}>
       <div className="links">
         <Link to="/#projects" onClick={goToProjects}>{nav.work}</Link>
-        <Link to="/resume">{nav.resume}</Link>
+        <a href={`/resume-${userLanguage}.pdf`}>{nav.resume}</a>
         <Link to="/contact">{nav.contact}</Link>
       </div>
       <div className="language-socials">

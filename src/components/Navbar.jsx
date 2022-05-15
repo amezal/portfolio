@@ -31,7 +31,7 @@ const Navbar = () => {
 
         <div className="links">
           <Link to="/#projects" onClick={goToProjects}>{nav.work}</Link>
-          <Link to="/resume">{nav.resume}</Link>
+          <a href={`/resume-${userLanguage}.pdf`}>{nav.resume}</a>
           <Link to="/contact">{nav.contact}</Link>
         </div>
 

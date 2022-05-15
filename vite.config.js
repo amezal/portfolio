@@ -7,5 +7,7 @@ export default defineConfig({
   plugins: [svgr(), react()],
   define: {
     'process.env': process.env
-  }
+  },
+  root: './',
+  publicDir: 'src/resume'
 })
