@@ -16,7 +16,6 @@ const Project = ({ name, description, github, live, video, icons, i }) => {
   const buttons = dictionary.projects.buttons;
 
   useEffect(() => {
-    console.log(seen);
     if (!seen) {
       if (inView) {
         setSeen(true);
