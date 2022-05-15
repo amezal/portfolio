@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../language/Language';
 import { RiGithubLine as Github, RiLinkedinBoxLine as Linkedin, RiWhatsappLine as Whatsapp } from 'react-icons/ri'
@@ -25,6 +26,16 @@ const Contact = () => {
 
   return (
     <main className="contact">
+      <Helmet>
+        <title>{userLanguage === 'en' ?
+          'Contact' : 'Contacto'} | Armando Meza
+        </title>
+        <meta name="description" content={
+          userLanguage === 'en' ?
+            'Contact Page - Armando Meza' :
+            'Página de contacto - Armando Meza'
+        } />
+      </Helmet>
       <form onSubmit={callApi}>
         <h2>{contact.title}</h2>
         <input type="text" placeholder={contact.name} />
