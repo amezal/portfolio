@@ -1,0 +1,72 @@
+@use 'variables' as *;
+
+.contact {
+  margin-top: 6rem;
+  overflow: scroll;
+  height: 100vh;
+  padding-bottom: 25vh;
+
+  h3 {
+    margin: 2rem auto;
+    width: 40ch;
+    text-align: center;
+  }
+
+  form {
+    @include flex(column, center, center);
+    margin: 10vh auto;
+    border-radius: 8px;
+    padding: 5rem 2rem;
+    max-width: 90vw;
+    gap: 2.4rem;
+    background-color: $midblue;
+
+    box-shadow: 13px 13px 26px #131d27,
+      -13px -13px 26px #192735;
+
+    input,
+    textarea {
+      width: 100%;
+      font-size: 1.5rem;
+      padding: 1.8rem 1.6rem;
+      border-radius: 8px;
+      resize: none;
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+    button {
+      font-size: 2rem;
+      border-radius: 5px;
+      @include flex(row, space-between, center);
+      background-color: $yellow;
+      color: $darkblue;
+      border: none;
+      outline: none;
+      padding: 0.5em 2em;
+      cursor: pointer;
+      transition: background-color, color, 200ms ease-in-out;
+
+      &:hover {
+        background-color: $darkblue;
+        color: $white;
+        transition: background-color, color, 100ms ease-in-out;
+      }
+    }
+  }
+
+  .socials {
+    @include flex(row, center, center);
+    gap: 1.8rem;
+  }
+
+  @media only screen and (min-width: 800px) {
+    form {
+      width: 60vw;
+      max-width: 1000px;
+    }
+  }
+}

@@ -6,6 +6,17 @@ const en = {
   },
   home: `I'm a web developer based in Nicaragua.
   I like building fast, interactive and functional web pages and apps.`,
+  contact: {
+    title: 'Contact',
+    name: 'Name',
+    email: 'E-mail',
+    message: 'Message',
+    submit: 'Submit'
+  },
+  thanks: {
+    text: 'Thanks for reaching out. I\'ll get back to you soon:)',
+    button: 'Go back'
+  },
   projects: {
     title: 'Projects',
     buttons: {

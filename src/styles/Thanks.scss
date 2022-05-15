@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+.thanks {
+  margin-top: 6rem;
+  overflow: scroll;
+  height: 100vh;
+  padding-bottom: 25vh;
+
+  p {
+    margin: 10vh auto;
+    text-align: center;
+    max-width: 95vw;
+  }
+
+  button {
+    border-radius: 5px;
+    @include flex(row, space-between, center);
+    background-color: $yellow;
+    margin: 0 auto;
+    color: $darkblue;
+    border: none;
+    outline: none;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    transition: background-color, color, 100ms ease-in-out;
+
+    svg {
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $darkblue;
+      transition: background-color, color, 200ms ease-in-out;
+    }
+  }
+}

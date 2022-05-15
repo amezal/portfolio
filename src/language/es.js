@@ -6,6 +6,17 @@ const es = {
   },
   home: `Soy un desarrollador web de Nicaragua.
   Me gusta desarrollar aplicaciones y sitios web rápidos, interactivos y funcionales.`,
+  contact: {
+    title: 'Contacto',
+    name: 'Nombre',
+    email: 'E-mail',
+    message: 'Mensaje',
+    submit: 'Enviar'
+  },
+  thanks: {
+    text: 'Gracias por contactarte conmigo. responderé lo antes posible:)',
+    button: 'Volver'
+  },
   projects: {
     title: 'Proyectos',
     buttons: {
