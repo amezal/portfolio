@@ -17,6 +17,10 @@ const en = {
     text: 'Thanks for reaching out. I\'ll get back to you soon:)',
     button: 'Go back'
   },
+  error: {
+    text: 'Page not found :(',
+    button: 'Go back'
+  },
   projects: {
     title: 'Projects',
     buttons: {

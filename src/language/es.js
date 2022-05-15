@@ -17,6 +17,10 @@ const es = {
     text: 'Gracias por contactarte conmigo. responderé lo antes posible:)',
     button: 'Volver'
   },
+  error: {
+    text: 'Página no encontrada:(',
+    button: 'Volver'
+  },
   projects: {
     title: 'Proyectos',
     buttons: {
