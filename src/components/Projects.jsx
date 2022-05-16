@@ -11,68 +11,8 @@ const Projects = () => {
 
   const [projects, setProjects] = useState(null);
   const { dictionary } = useLanguage();
-  const texts = dictionary.projects.list;
-  // useEffect(async () => {
-  //   const accessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
-  // const res = await fetch(`https://cdn.contentful.com/spaces/sxn2t9too10w/environments/master/assets?access_token=${accessToken}`)
-  // console.log(await res.json());
-  // const icons = {
-  //   ReactIcon: <FaReact key='react' />,
-  //   Sass: <FaSass key='sas' />,
-  //   WP: <FaWordpress key='wordpress' />,
-  //   Google: <FaGoogle key='google' />,
-  //   Node: <FaNode key='node' />,
-  //   Gatsby: <SiGatsby key='gatsby' />,
-  //   Auth0: <SiAuth0 key='auth0' />,
-  //   Mongo: <SiMongodb key='mongodb' />,
-  //   Vite: <SiVite key='vite' />,
-  //   CSS: <DiCss3 key='css' />,
-  //   JS: <DiJavascript key='javascript' />,
-  //   HTML: <DiHtml5 key='html' />,
-  //   P5: <P5Icon key='p5.js' />
-  // }
-  // setProjects({
-  //   greatreads: {
-  //     ...texts.greatreads,
-  //     github: 'https://github.com/Amezal/great-reads-frontend',
-  //     live: 'https://greatreads.site',
-  //     video: 'https://drive.google.com/uc?export=view&id=15IeDecdB2T6DAaB1aNbJKU_-hjDwAOUR',
-  //     icons: [icons.ReactIcon, icons.Auth0, icons.Mongo, icons.HTML, icons.CSS, icons.JS, icons.Node]
-  //   },
-  //   emprende: {
-  //     ...texts.emprende,
-  //     github: 'https://github.com/Amezal/emprende-website',
-  //     live: 'https://emprende.netlify.app',
-  //     video: 'https://drive.google.com/uc?export=view&id=1_jd8YeuZW3UgWYH1x_aOBVRFEUw55wgA',
-  //     icons: [icons.ReactIcon, icons.Gatsby, icons.WP, icons.Google, icons.HTML, icons.Sass, icons.JS]
-  //   },
-  //   daniela: {
-  //     ...texts.daniela,
-  //     github: 'https://github.com/Amezal/daniela-portfolio',
-  //     live: 'https://danielas-portfolio.netlify.app',
-  //     video: 'https://drive.google.com/uc?export=view&id=138nwWMzW2RIn07E16MVsV1I_0AfKUFCT',
-  //     icons: [icons.ReactIcon, icons.Gatsby, icons.WP, icons.HTML, icons.CSS, icons.JS]
-  //   },
-  //   sorting: {
-  //     ...texts.sorting,
-  //     github: 'https://github.com/Amezal/amezal.github.io/tree/master/sorting-algorithms',
-  //     live: 'https://amezal.github.io/sorting-algorithms/',
-  //     video: 'https://drive.google.com/uc?export=view&id=1otsTm4iy5kCmtVR6XO4intju9JfBAmA7',
-  //     icons: [icons.HTML, icons.CSS, icons.JS, icons.P5]
-  //   },
-  //   portfolio: {
-  //     ...texts.portfolio,
-  //     github: 'https://github.com/Amezal/portfolio',
-  //     live: 'https://emprende.netlify.app',
-  //     video: 'https://drive.google.com/uc?export=view&id=1u05ZP-xFB8JIgFfNbnAfFUdvQHrj9OdW',
-  //     icons: [icons.ReactIcon, icons.Vite, icons.HTML, icons.Sass, icons.JS]
-  //   },
-  // })
-  // }, [])
 
   useEffect(() => {
-
-
 
     async function fetchData() {
       const accessToken = import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN;
@@ -101,35 +41,35 @@ const Projects = () => {
       }
       setProjects({
         greatreads: {
-          ...texts.greatreads,
+          title: 'greatreads',
           github: 'https://github.com/Amezal/great-reads-frontend',
           live: 'https://greatreads.site',
           video: links.greatreads,
           icons: [icons.ReactIcon, icons.Auth0, icons.Mongo, icons.HTML, icons.CSS, icons.JS, icons.Node]
         },
         emprende: {
-          ...texts.emprende,
+          title: 'emprende',
           github: 'https://github.com/Amezal/emprende-website',
           live: 'https://emprende.netlify.app',
           video: links.emprende,
           icons: [icons.ReactIcon, icons.Gatsby, icons.WP, icons.Google, icons.HTML, icons.Sass, icons.JS]
         },
         daniela: {
-          ...texts.daniela,
+          title: 'daniela',
           github: 'https://github.com/Amezal/daniela-portfolio',
           live: 'https://danielas-portfolio.netlify.app',
           video: links.daniela,
           icons: [icons.ReactIcon, icons.Gatsby, icons.WP, icons.HTML, icons.CSS, icons.JS]
         },
         sorting: {
-          ...texts.sorting,
+          title: 'sorting',
           github: 'https://github.com/Amezal/amezal.github.io/tree/master/sorting-algorithms',
           live: 'https://amezal.github.io/sorting-algorithms/',
           video: links.sorting,
           icons: [icons.HTML, icons.CSS, icons.JS, icons.P5]
         },
         portfolio: {
-          ...texts.portfolio,
+          title: 'portfolio',
           github: 'https://github.com/Amezal/portfolio',
           live: 'https://emprende.netlify.app',
           video: links.portfolio,
@@ -140,8 +80,6 @@ const Projects = () => {
     }
     fetchData();
   }, [])
-
-
 
 
   return (

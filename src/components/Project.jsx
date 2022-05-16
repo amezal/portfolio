@@ -7,13 +7,14 @@ import { FaPlay } from "react-icons/fa";
 
 import '../styles/Project.scss';
 
-const Project = ({ name, description, github, live, video, icons, i }) => {
+const Project = ({ title, github, live, video, icons, i }) => {
 
   const videoRef = useRef(null);
   const { ref, inView, entry } = useInView();
   const [seen, setSeen] = useState(false);
-  const { dictionary } = useLanguage();
+  const { dictionary, userLanguage } = useLanguage();
   const buttons = dictionary.projects.buttons;
+  const texts = dictionary.projects.list[title];
 
   useEffect(() => {
     if (!seen) {
@@ -21,7 +22,7 @@ const Project = ({ name, description, github, live, video, icons, i }) => {
         setSeen(true);
       }
     }
-  }, [inView])
+  }, [inView, userLanguage])
 
   const mouseOver = () => {
     videoRef.current.play();
@@ -43,7 +44,7 @@ const Project = ({ name, description, github, live, video, icons, i }) => {
       ref={ref}
       style={style}
     >
-      <h3>{name}</h3>
+      <h3>{texts.name}</h3>
       <div className="video">
         <div className="filter">
           <FaPlay size={32} />
@@ -52,8 +53,12 @@ const Project = ({ name, description, github, live, video, icons, i }) => {
         </div>
         <video
           ref={videoRef}
-          muted="muted"
-          loop="loop"
+          muted
+          loop
+          playsInline
+          type="video/mp4"
+          width="100%"
+          height="100%"
         >
           <source
             src={video}
@@ -61,7 +66,7 @@ const Project = ({ name, description, github, live, video, icons, i }) => {
           />
         </video>
       </div>
-      <p>{description}</p>
+      <p>{texts.description}</p>
       <div className="icons">
         {
           icons &&
