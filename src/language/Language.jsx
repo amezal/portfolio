@@ -14,7 +14,11 @@ const LanguageContext = createContext({
 );
 
 export const LanguageProvider = ({ children }) => {
-  const defaultLanguage = window.localStorage.getItem('amezal-lang') || navigator.language.split('-')[0];
+  let userDefaultLanguage = navigator.language.split('-')[0];
+  if (userDefaultLanguage !== 'es' && userDefaultLanguage !== 'en') {
+    userDefaultLanguage = 'en';
+  }
+  const defaultLanguage = window.localStorage.getItem('amezal-lang') || userDefaultLanguage;
 
   const [userLanguage, setUserLanguage] = useState(defaultLanguage || 'en');
 

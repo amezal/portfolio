@@ -24,7 +24,7 @@ const MobileMenu = ({ active }) => {
     <animated.nav className='mobile-menu' style={props}>
       <div className="links">
         <Link to="/#projects" onClick={goToProjects}>{nav.work}</Link>
-        <a target="_blank" rel="noreferrer" href={`/resume-${userLanguage}.pdf`}>{nav.resume}</a>
+        <a target="_blank" rel="noreferrer" href={`/Armando Meza - ${userLanguage.toUpperCase()}.pdf`}>{nav.resume}</a>
         <Link to="/contact">{nav.contact}</Link>
       </div>
       <div className="language-socials">
